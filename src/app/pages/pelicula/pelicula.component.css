@@ -1,0 +1,84 @@
+
+/* Estilos para el header */
+.contenedor{
+    width: 50%;
+    margin: auto;
+}
+
+hr{
+    height: 2px;
+}
+
+header{
+    background-size: cover;
+    background-position-y: center;
+    height: 400px;
+}
+
+.header-contenedor{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+button{
+    outline: none;
+}
+
+mat-icon{
+    margin-left: -5px;
+}
+
+.contenedor-texto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-contenedor h1{
+    margin-bottom: 80px;
+    color: #fff;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.imagen{
+    width: 200px;
+    margin: -130px auto;
+}
+
+.imagen img{
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .6);
+}
+
+.sinopsis{
+    margin-top: 80px;
+    padding: 20px;
+    color: #707070;
+}
+
+.titulo-gris{
+    color: #707070;
+}
+
+.trailer{
+    margin-top: 40px;
+}
+
+iframe{
+    width: 80%;
+    max-width: 560px;
+    height: 315px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+}
+
+.titulo-blanco{
+    color: #fff;
+}

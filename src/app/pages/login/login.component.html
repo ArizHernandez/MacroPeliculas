@@ -1,0 +1,80 @@
+<div class="contenedor animate__animated animate__fadeInRightBig">
+    <div class="contenedor-img">
+        <img src="assets/images/undraw_Login_re_4vu2.svg" class="img-fluid" alt="">
+    </div>
+    <h3 class="text-center mt-3">LogIn</h3>
+    <hr class="mt-0">
+    <div class="row">
+        <div class="col ">
+            <form autocomplete="off" [formGroup]="forma">
+                <div class="form-row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Correo</mat-label>
+                        <input matInput type="email" formControlName="correo">
+                    </mat-form-field>
+                    <p class="text-danger"
+                       *ngIf="correoInvalido">
+                    *Correo invalido
+                    </p>
+                    </div>
+                <div class="form-row">
+                    <mat-form-field appearance="outline" class="mb-0">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput formControlName="password" type="password">
+                    </mat-form-field>
+                    <p class="text-danger"
+                       *ngIf="passwordInvalida">
+                    *Contraseña invalida( minimo 6 caracteres )
+                    </p>
+                </div>
+                <div class="form-row mb-1 text-center">
+                    <label class="text-secondary">Guardar usuario
+                    <input formControlName="recordar" type="checkbox" id="saveUser">
+                    </label>
+                </div>
+                <p class="text-center text-secondary">Aun no tienes una cuenta? <a routerLink="/signup" class="text-primary">Registrarse</a></p>
+                <div class="form-row text-center">
+                    <button type="submit" 
+                            mat-raised-button 
+                            color="primary"
+                            (click)="login(forma)">Ingresar</button>
+                </div>
+            </form>
+        </div>
+        <div class="divisor">
+            <hr class="mt-4">
+            <h4 class="text-center">o</h4>
+        </div>
+        <div class="row my-2">
+            <div class="col text-center">
+                <h4>Inicia sesión con</h4>
+            </div>
+        </div>
+        <div class="row redes text-center ml-md-1">
+            <div class="col-12 col-md-4">
+                <button mat-raised-button color="primary" 
+                        class="redes-button btn-block mb-2 mb-md-0 py-1 py-md-2 facebook"
+                        (click)="logInExternal('facebook')">
+                    <i class="fab fa-facebook fa-2x"></i>
+                    <p class="mb-0">Facebook</p>
+                </button>
+            </div>
+            <div class="col-12 col-md-4">
+                <button mat-raised-button color="warn" 
+                        class="redes-button btn-block mb-2 mb-md-0 py-1 py-md-2"
+                        (click)="logInExternal('google')">
+                    <i class="fab fa-google fa-2x"></i>
+                    <p class="mb-0">Google</p>
+                </button>
+            </div>
+            <div class="col-12 col-md-4">
+                <button mat-raised-button 
+                        class="redes-button btn-block mb-2 mb-md-0 py-1 py-md-2 twitter"
+                        (click)="logInExternal('twitter')">
+                    <i class="fab fa-twitter fa-2x"></i>
+                    <p class="mb-0">Twitter</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

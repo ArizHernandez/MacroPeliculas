@@ -1,0 +1,75 @@
+
+/* Estilos para realizar la separación del navbar */
+.separador{
+    flex: 1 1 auto;
+}
+
+
+a{
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+    transition: all .3s ease;
+    font-weight: 300;
+}
+
+a:hover{
+    border-bottom: 2px solid tomato;
+    border-top: 2px solid tomato;
+    opacity: 80%;
+}
+
+.active{
+    border-top: 2px solid tomato;
+    font-style: italic;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 400;
+    outline: none;
+}
+
+h3:hover{
+    cursor: pointer;
+}
+
+button{
+    outline: none;
+}
+
+mat-toolbar{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+}
+
+.nombre__usuario{
+    background: #87CEEB;
+    color: #fdffeb;
+    border-radius: 20px;
+    font-size: 19px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+}
+
+.menu{
+    display: none;
+}
+
+@media (max-width: 425px){
+    .nombre__usuario{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    nav{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+}

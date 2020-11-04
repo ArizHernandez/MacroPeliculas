@@ -1,0 +1,55 @@
+<mat-toolbar color="primary">
+    
+    <!-- Logo de la pagina -->
+    <h3 routerLink="/home">MacroPelicula</h3>
+
+    <!-- Nuestra el nombre del usuario -->
+    <div class="usuario" *ngIf="authService.usuario.uid">
+        <div class="nombre__usuario ml-2">
+
+            <small> {{authService.usuario.nombre }} </small>
+
+        </div>
+    </div>
+
+    <!-- Separa nuestra navbar -->
+    <div class="separador"></div>
+
+    <!-- Menu de usuario, se muestra solo si ya esta logeado -->
+    <button *ngIf="authService.usuario.uid"
+            mat-icon-button 
+            class="menu"
+            [mat-menu-trigger-for]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu class="menu">
+
+        <button mat-menu-item routerLink="home">
+            <mat-icon>movie</mat-icon>
+            <span>Home</span>
+        </button>
+
+        <button mat-menu-item routerLink="search/buscar">
+            <mat-icon>search</mat-icon>
+            <span>Buscar Pelicula</span>
+        </button>
+        
+        <button mat-menu-item>
+            <mat-icon>shopping_cart</mat-icon>
+            <span>Historial</span>
+        </button>
+
+        <!-- Boton de cerrar sesión -->
+        <button mat-menu-item (click)="authService.logOut()">
+            <mat-icon>power_settings_new</mat-icon>
+            <span>logOut</span>
+        </button>
+
+    </mat-menu>
+
+    <nav *ngIf="authService.usuario.uid">
+        <a class="link" routerLink="/home" routerLinkActive="active">Home</a>
+        <a class="link" routerLink="/search/buscar" routerLinkActive="active">Search</a>
+        <a class="link" routerLink="/login" (click)="authService.logOut()">LogOut</a>
+    </nav>
+</mat-toolbar>

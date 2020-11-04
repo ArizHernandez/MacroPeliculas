@@ -1,0 +1,52 @@
+input{
+    outline: none;
+}
+
+button{
+    outline: none;
+}
+
+h3{
+    color:white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+hr{
+    color: white;
+    width: 50%;
+    margin: 0px auto
+}
+
+form{
+    width: 35%;
+    margin: 25px auto;
+}
+
+input{
+    height: 35px;
+    width: 70%;
+    margin-right: 10px;
+}
+
+.contenedor__color{
+    background: #f2f2f2;
+    width: 95%;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+@media (max-width: 425px){
+    form{
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px){
+    form{
+        width: 40%;
+    }
+}

@@ -1,0 +1,30 @@
+<!-- Slider main container -->
+<div class="swiper-container animate__animated animate__fadeIn">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slid de cada pelicula -->
+        <div class="swiper-slide"
+             *ngFor="let movie of peliculas"
+             [ngStyle]="{
+                 'background-size': 'cover',
+                 'background-image': 'url('+ (movie.backdrop_path | imgFill:'1280') +')'
+             }">
+             <!-- contenedor de la información de la pelicula -->
+             <div class="movie-description">
+                 <!-- titulo de la pelicula -->
+                 <h3 class="text-white"> {{ movie.title }} </h3>
+                 <!-- Un pequeño resumen de la pelicula -->
+                <p class="text-white">{{ movie.overview | slice:0:160 }}... </p>
+            </div>
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
+    <div (click)="onSlideNext()" class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>

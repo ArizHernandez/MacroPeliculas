@@ -1,0 +1,21 @@
+.contenedor{
+    width: 95%;
+    margin: 0px auto;
+}
+
+.color{
+    background: #f2f2f2;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-radius: 25px;
+}
+
+.contenedor h3{
+    text-align: center;
+}
+
+.contenedor .color hr{
+    width: 50%;
+    margin: 0px auto;
+    margin-bottom: 10px;
+}
