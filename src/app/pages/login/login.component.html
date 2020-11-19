@@ -7,38 +7,46 @@
     <div class="row">
         <div class="col ">
             <form autocomplete="off" [formGroup]="forma">
+
                 <div class="form-row">
                     <mat-form-field appearance="outline">
                         <mat-label>Correo</mat-label>
                         <input matInput type="email" formControlName="correo">
+                        <mat-hint class="text-danger" 
+                                  *ngIf="correoInvalido">
+                            *Correo Invalido
+                        </mat-hint>
                     </mat-form-field>
-                    <p class="text-danger"
-                       *ngIf="correoInvalido">
-                    *Correo invalido
-                    </p>
-                    </div>
+                </div>
+
                 <div class="form-row">
-                    <mat-form-field appearance="outline" class="mb-0">
+                    <mat-form-field appearance="outline" class="my-2">
                         <mat-label>Contraseña</mat-label>
                         <input matInput formControlName="password" type="password">
+                        <mat-hint class="text-danger" 
+                                *ngIf="passwordInvalida">
+                            *Minimo 8 caracteres
+                        </mat-hint>
                     </mat-form-field>
-                    <p class="text-danger"
-                       *ngIf="passwordInvalida">
-                    *Contraseña invalida( minimo 6 caracteres )
-                    </p>
                 </div>
+                
                 <div class="form-row mb-1 text-center">
-                    <label class="text-secondary">Guardar usuario
+                    <label class="text-secondary">Recordarme
                     <input formControlName="recordar" type="checkbox" id="saveUser">
                     </label>
                 </div>
+
                 <p class="text-center text-secondary">Aun no tienes una cuenta? <a routerLink="/signup" class="text-primary">Registrarse</a></p>
+
                 <div class="form-row text-center">
                     <button type="submit" 
                             mat-raised-button 
                             color="primary"
-                            (click)="login(forma)">Ingresar</button>
+                            (click)="login(forma)">
+                        Ingresar
+                    </button>
                 </div>
+                
             </form>
         </div>
         <div class="divisor">

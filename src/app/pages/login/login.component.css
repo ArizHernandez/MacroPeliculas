@@ -4,7 +4,6 @@
     #ff4081 - warn
 */
 
-
 .contenedor{
     box-sizing: border-box;
     background: #fff;
@@ -14,7 +13,6 @@
     width: 45%;
     padding: 20px;
     margin: 30px auto;
-
 }
 
 .contenedor-img{
@@ -56,6 +54,7 @@ p{
 .redes{
     background-image: url('../../../assets/images/wave.svg');
     background-size: cover;
+    width: 100%;
     padding-bottom: 10px;
     border-radius: 10px;
 }
@@ -83,19 +82,20 @@ mat-form-field{
     margin-bottom: -10px !important;
 }
 
-@media screen and ( max-width: 991px ){
-    .contenedor{
-        width: 50%;
-    }
-} 
-
-@media screen and ( max-width: 768px){
+@media (max-width: 768px){
     .contenedor{
         width: 60%;
     }
 }
-@media screen and ( max-width: 767px ){
+
+@media (max-width: 425px){
     .contenedor{
+        margin-top: 0px;
+        margin-bottom: 0px;
         width: 100%;
+        border-radius: 0px;
+    }
+    .redes{
+        margin: 0px auto;
     }
 }

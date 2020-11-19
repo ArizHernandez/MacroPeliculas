@@ -3,23 +3,25 @@
 <hr>
 
 <form [formGroup]="forma">
-    <input type="text" 
-           formControlName="pelicula" 
-           placeholder="Nombre de la pelicula"
-           (keydown.enter)="buscar(forma)">
-    <button type="button" 
-            mat-flat-button 
-            color="warn"
-            (click)="buscar(forma)">
-        Buscar
-    </button>
+    <div class="form-row">
+        <input type="text" 
+               formControlName="pelicula" 
+               placeholder="Nombre de la pelicula"
+               class="form-control"
+               (keydown.enter)="buscar(forma)">
+        <button type="button" 
+                mat-flat-button 
+                color="warn"
+                (click)="buscar(forma)">
+            Buscar
+        </button>
+    </div>
 </form>
 
-<div class="contenedor__color" *ngIf="!buscando">
+<div *ngIf="!buscando">
     <div class="container animate__animated animate__fadeIn">
     
         <!-- Mostramos nuestro card, solo si se reciben peliculas-->
-        <hr class="bg-white">
         <app-peliculas-card class="animate__slow" [movies]="peliculas" *ngIf="peliculas.length > 0"></app-peliculas-card>
     </div>
 </div>

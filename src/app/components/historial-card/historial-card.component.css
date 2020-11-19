@@ -1,0 +1,32 @@
+.card-img{
+    width: 20%;
+}
+
+.card-img img{
+    width: 100%;
+}
+
+.card-content{
+    display: inline-block;
+}
+
+span{
+    color:tomato
+}
+
+@media (max-width: 320px){
+    .card-img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px){
+    .card-img{
+        width: 30%;
+    }
+}
+@media (max-width: 320px){
+    .card-img{
+        width: 100%;
+    }
+}

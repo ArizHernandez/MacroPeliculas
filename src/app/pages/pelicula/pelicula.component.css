@@ -82,3 +82,9 @@ iframe{
 .titulo-blanco{
     color: #fff;
 }
+
+@media (max-width: 425px){
+    .contenedor{
+        width: 80%;
+    }
+}

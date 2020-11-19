@@ -1,0 +1,20 @@
+
+<div class="col-12 mb-2"
+     *ngFor="let compra of historial">
+     <div class="card bg-dark text-white">
+        <div class="card-body row">
+
+          <div class="card-img card-col-12">
+              <img [src]="compra.url" [alt]="compra.nombre">
+          </div>
+          <div class="card-content col">
+              <p class="mb-0"><span>Pelicula: </span>{{ compra.nombre_pelicula }}</p>
+              <p class="mb-0"><span>Costo:</span> {{ compra.precio }}</p>
+              <p class="mb-0"><span>Direccion:</span> {{ compra.direccion }}</p>
+              <p class="mb-0"><span>Pedido:</span> {{ compra.fecha_inicio | date }}</p>
+              <p class="card-text"><span>Entrega:</span> {{ compra.fecha_fin | date }}</p>
+          </div>
+          
+        </div>
+      </div>
+</div>

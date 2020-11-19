@@ -1,3 +1,12 @@
 export const environment = {
-  production: true
+  production: true,
+  url: 'firebase Functions url',
+  firebase: {
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
+    }
 };

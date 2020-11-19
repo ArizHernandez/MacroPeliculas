@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Movie } from '../../Models/Peliculas.model';
 
@@ -7,15 +7,12 @@ import { Movie } from '../../Models/Peliculas.model';
   templateUrl: './peliculas-card.component.html',
   styleUrls: ['./peliculas-card.component.css']
 })
-export class PeliculasCardComponent implements OnInit {
+export class PeliculasCardComponent {
 
   //Recibe un parametro el cual le asignara un valor a nuestra variable movies que es tipo Movie
   @Input() movies:Movie[] = []
 
   constructor( private router:Router ) { }
-
-  ngOnInit(): void {
-  }
 
   // Redirrecciónar a la pagina de la pelicula seleccionada
   verPelicula( idPelicula ){

@@ -8,8 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
-
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -20,7 +20,9 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    MatDatepickerModule
   ],
   exports:[
     MatToolbarModule,
@@ -29,7 +31,9 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    MatDatepickerModule
   ],
   declarations: []
 })

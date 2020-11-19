@@ -21,7 +21,7 @@ export class SlideShowComponent implements AfterViewInit {
     
     //Creo un nuevo slider con la propiedad de loop
     this.mySwiper = new Swiper('.swiper-container', {
-      loop: true
+      loop: true,
     });
 
   }
@@ -29,7 +29,8 @@ export class SlideShowComponent implements AfterViewInit {
   //Mostrar el siguiente slider
   onSlideNext(){
 
-    this.mySwiper.slideNext();
+    console.log('siguiente');
+    this.mySwiper.slideNext(100);
 
   }
   

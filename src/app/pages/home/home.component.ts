@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
         .subscribe( data => {
           this.movies = data;
           this.moviesSliceShow = data;
-          console.log(data);
         })    
 
   }

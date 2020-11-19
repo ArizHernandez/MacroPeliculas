@@ -5,10 +5,12 @@
 }
 
 .swiper-button-prev, .swiper-button-next{
+    z-index: 2;
     color: #fff;
 }
 
 .movie-description{
+    z-index: 1;
     background: rgba(0, 0, 0, 0.35);
     position: absolute;
     bottom:0;
@@ -17,4 +19,24 @@
 }
 .movie-description h3{
     text-align: center;
+}
+
+@media ( max-width: 768px ){
+    .swiper-container{
+        height: 350px;
+    }
+}
+
+@media( max-width: 320px ){
+    .swiper-container{
+        height: 250px;
+    }
+
+    h3{
+        font-size: 16px;
+    }
+    
+    p{
+        font-size: 12px;
+    }
 }

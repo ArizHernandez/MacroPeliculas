@@ -6,6 +6,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { PeliculaComponent } from './pages/pelicula/pelicula.component';
 import { AuthGuard } from './guards/auth-guard.guard';
 import { SearchComponent } from './pages/search/search.component';
+import { HistorialComponent } from './pages/historial/historial.component';
 
 const routes:Routes = [
   { path:'login', component:LoginComponent},
@@ -13,6 +14,7 @@ const routes:Routes = [
   { path:'home', component:HomeComponent, canActivate: [AuthGuard] },
   { path:'pelicula/:id', component: PeliculaComponent},
   { path:'search/:pelicula', component: SearchComponent},
+  { path:'historial/:usuarioId', component: HistorialComponent},
   { path:'**', pathMatch:'full', redirectTo:'/home'}
 ]
 

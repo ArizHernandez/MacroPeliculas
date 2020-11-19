@@ -4,21 +4,13 @@
 
 export const environment = {
   production: false,
+  url: 'Firebase function url/ locale',  //example: http://localhost:5000/macropeliculas/us-central1
   firebase: {
-    apiKey: "AIzaSyDiOnir61xV8Pd5ya5ECLUHgjvKLd-Rn9Y",
-    authDomain: "macropeliculas.firebaseapp.com",
-    databaseURL: "https://macropeliculas.firebaseio.com",
-    projectId: "macropeliculas",
-    storageBucket: "macropeliculas.appspot.com",
-    messagingSenderId: "171812351174"
-    }
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
+  }
 };
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.

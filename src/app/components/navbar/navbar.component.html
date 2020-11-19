@@ -3,12 +3,14 @@
     <!-- Logo de la pagina -->
     <h3 routerLink="/home">MacroPelicula</h3>
 
+    <a routerLink="/home" class="logo">
+        <img src="assets/images/icono.png" alt="icono">
+    </a>
+
     <!-- Nuestra el nombre del usuario -->
     <div class="usuario" *ngIf="authService.usuario.uid">
         <div class="nombre__usuario ml-2">
-
             <small> {{authService.usuario.nombre }} </small>
-
         </div>
     </div>
 
@@ -34,7 +36,7 @@
             <span>Buscar Pelicula</span>
         </button>
         
-        <button mat-menu-item>
+        <button mat-menu-item [routerLink]="[ 'historial', authService.usuario.uid ]">
             <mat-icon>shopping_cart</mat-icon>
             <span>Historial</span>
         </button>
@@ -50,6 +52,11 @@
     <nav *ngIf="authService.usuario.uid">
         <a class="link" routerLink="/home" routerLinkActive="active">Home</a>
         <a class="link" routerLink="/search/buscar" routerLinkActive="active">Search</a>
+        <a class="link" 
+           [routerLink]="[ 'historial', authService.usuario.uid ]" 
+           routerLinkActive="active">
+            Historial
+        </a>
         <a class="link" routerLink="/login" (click)="authService.logOut()">LogOut</a>
     </nav>
 </mat-toolbar>

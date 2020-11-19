@@ -11,6 +11,9 @@ import { MaterialModule } from '../material.module';
 import { PipesModule } from '../pipes/pipes.module';
 import { RatingModule } from 'ng-starrating';
 import { CastSlideComponent } from './cast-slide/cast-slide.component';
+import { HistorialCardComponent } from './historial-card/historial-card.component';
+import { RentarFormComponent } from './rentar-form/rentar-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   // La declaración de nuestros componentes
@@ -19,6 +22,8 @@ import { CastSlideComponent } from './cast-slide/cast-slide.component';
     PeliculasCardComponent,
     SlideShowComponent,
     CastSlideComponent,
+    HistorialCardComponent,
+    RentarFormComponent,
   ],
   // Importaciones de los modulos que vamos a utilizar 
   imports: [
@@ -26,14 +31,16 @@ import { CastSlideComponent } from './cast-slide/cast-slide.component';
     MaterialModule,
     AppRoutingModule,
     RatingModule,
-    PipesModule
+    PipesModule,
+    ReactiveFormsModule
   ],
   // Exportar los components de nuestro modulo
   exports: [
     NavbarComponent,
     PeliculasCardComponent,
     SlideShowComponent,
-    CastSlideComponent
+    CastSlideComponent,
+    HistorialCardComponent
   ]
 })
 export class ComponentsModule { }

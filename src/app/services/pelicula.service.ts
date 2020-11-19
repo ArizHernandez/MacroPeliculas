@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators'
 import { Observable } from 'rxjs';
 import { Cast, CastResponse } from '../Models/Cast.model';
 import { TrailerResponse, Result } from '../Models/Trailer.model';
+import { PeliculaResponse } from '../Models/Pelicula.model';
 
 @Injectable({
   providedIn: 'root'
@@ -31,20 +32,18 @@ export class PeliculaService {
                 params: this.params
               })
               .pipe(
-                map( resp => {
-                  return resp.results;
-                })
+                map( resp => resp.results )
               )
   }
 
   //Obtener información de la pelicula
-  getPelicula( peliculaId ):Observable<TrailerResponse>{
+  getPelicula( peliculaId ):Observable<PeliculaResponse>{
     const params = {
       ...this.params, 
       page: '1'
     }
   
-    return this.http.get<TrailerResponse>(`${this.url}movie/${peliculaId}`,{
+    return this.http.get<PeliculaResponse>(`${this.url}movie/${peliculaId}`,{
       params
     })
   }

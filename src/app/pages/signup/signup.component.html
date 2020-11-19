@@ -1,17 +1,48 @@
-<a routerLink="/login" class="text-white">
-    <i class="fa fa-arrow-left"></i>
-    Back
-</a>
 <div class="contenedor animate__animated animate__fadeInLeftBig">
+    <a routerLink="/login" class="text-dark">
+        <i class="fa fa-arrow-left"></i>
+        Back
+    </a>
     <img src="assets/images/undraw_sign_in_e6hj.svg" class="img-fluid">
-        <h3 class="text-center mt-3">SignIn</h3>
-        <hr>
-        <form autocomplete="off" [formGroup]="forma">
-            <div class="form-row">
-                <mat-form-field appearance="outline">
-                    <mat-label>Nombre</mat-label>
-                    <input matInput type="email" formControlName="nombre">
-                </mat-form-field>
-            </div>
-        </form>
+    <h3 class="text-center mt-3">Registrarse</h3>
+    <hr class="mt-2">
+    <form autocomplete="off" [formGroup]="forma">
+        
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Correo</mat-label>
+                <input matInput type="email" formControlName="correo">
+                <mat-hint class="text-danger" 
+                            *ngIf="correoInvalido">
+                    *Correo Invalido
+                </mat-hint>
+            </mat-form-field>
+        </div>
+        
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password" formControlName="password">
+                <mat-hint class="text-danger" 
+                            *ngIf="passwordInvalido">
+                    *Minimo 8 caracteres
+                </mat-hint>
+            </mat-form-field>
+        </div>
+
+        <div class="form-row mb-2 text-center">
+            <label class="text-secondary">Recordarme
+            <input formControlName="recordar" type="checkbox" id="saveUser">
+            </label>
+        </div>
+
+        <div class="form-row text-center">
+            <button (click)="sigIn( forma )"
+                    type="submit"
+                    mat-raised-button
+                    color="primary">
+                Ingresar    
+            </button>
+        </div>
+    </form>
 </div>

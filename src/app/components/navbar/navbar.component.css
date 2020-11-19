@@ -4,8 +4,24 @@
     flex: 1 1 auto;
 }
 
+.logo{
+    width:34px;
+    color: white;
+    border: none;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 0px;
+}
 
-a{
+.logo img{
+    width: 100%;
+}
+
+.logo:hover{
+    border: none;
+}
+
+.link{
     outline: none;
     color: #fff;
     text-decoration: none;
@@ -16,14 +32,13 @@ a{
     font-weight: 300;
 }
 
-a:hover{
-    border-bottom: 2px solid tomato;
-    border-top: 2px solid tomato;
-    opacity: 80%;
+.link:hover{
+    border-bottom: 2px solid rgb(69, 111, 226);
+    opacity: 0.8;
 }
 
 .active{
-    border-top: 2px solid tomato;
+    border-top: 2px solid rgb(69, 111, 226);
     font-style: italic;
 }
 
@@ -59,17 +74,17 @@ mat-toolbar{
     display: none;
 }
 
-@media (max-width: 425px){
-    .nombre__usuario{
-        display: none;
-    }
-}
-
 @media (max-width: 768px){
     nav{
         display: none;
     }
     .menu{
         display: block;
+    }
+}
+
+@media (max-width: 425px){
+    .nombre__usuario{
+        display: none;
     }
 }

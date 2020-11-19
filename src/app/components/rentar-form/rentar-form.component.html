@@ -1,0 +1,72 @@
+<form autocomplete="off" [formGroup]="forma">
+
+    <div class="form-row">
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre completo</mat-label>
+            <input matInput formControlName="nombre" type="text" >
+            <mat-hint class="text-danger" 
+                        *ngIf="nombreInvalido">
+                *Minimo 10 caracteres
+            </mat-hint>
+        </mat-form-field>
+    </div>
+    
+    <div class="form-row">
+        <mat-form-field appearance="outline" class="my-2">
+            <mat-label>Dirección</mat-label>
+            <input matInput formControlName="direccion" type="text">
+            <mat-hint class="text-danger" 
+                    *ngIf="direccionInvalido">
+                *Minimo 15 caracteres
+            </mat-hint>
+        </mat-form-field>
+    </div>
+
+    <div class="form-row">
+        <mat-form-field appearance="outline" class="my-2">
+            <mat-label>Precio</mat-label>
+            <input matInput formControlName="precio" readonly type="number">
+        </mat-form-field>
+    </div>
+
+    <div class="form-row">
+        <mat-form-field appearance="outline" class="my-2">
+            <mat-label>Rentar para el dia</mat-label>
+            <input matInput formControlName="start" type="date">
+            <mat-hint class="text-danger" 
+                    *ngIf="fechaInicioInvalido">
+                *Fecha invalida
+            </mat-hint>
+        </mat-form-field>
+    </div>
+
+    <div class="form-row">
+        <mat-form-field appearance="outline" class="my-2">
+            <mat-label>Entregar el dia</mat-label>
+            <input matInput formControlName="end" type="date">
+            <mat-hint class="text-danger" 
+                    *ngIf="fechaFinInvalido">
+                *Fecha invalida
+            </mat-hint>
+        </mat-form-field>
+    </div>
+
+
+
+    <div class="form-row text-center">
+        <button type="submit" 
+                mat-raised-button 
+                color="primary"
+                class="mr-2"
+                (click)="completarRenta(forma)">
+            Ingresar
+        </button>
+        <button type="submit" 
+                mat-raised-button 
+                color="warn"
+                (click)="cancelar()">
+            Cancelar
+        </button>
+    </div>
+    
+</form>

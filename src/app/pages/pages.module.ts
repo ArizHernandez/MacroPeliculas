@@ -13,6 +13,7 @@ import { MaterialModule } from '../material.module';
 import { PeliculaComponent } from './pelicula/pelicula.component';
 import { PipesModule } from '../pipes/pipes.module';
 import { SearchComponent } from './search/search.component';
+import { HistorialComponent } from './historial/historial.component';
 
 
 
@@ -23,7 +24,7 @@ import { SearchComponent } from './search/search.component';
     HomeComponent, 
     SignupComponent, 
     PeliculaComponent, 
-    SearchComponent
+    SearchComponent, HistorialComponent
   ],
   imports: [
     CommonModule,

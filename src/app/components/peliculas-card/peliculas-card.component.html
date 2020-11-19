@@ -10,11 +10,11 @@
 <div class="row" *ngIf="movies">
 
     <!-- Siclo para mostrar cada card -->
-    <div class="col-lg-3 col-md-4 col-6 mb-4 animate__animated animate__fadeIn " 
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 animate__animated animate__fadeIn " 
          *ngFor="let pelicula of movies">
 
          <!-- Comienzo del card -->
-        <div class="card" (click)='verPelicula( pelicula.id)'>
+        <div class="card bg-dark" (click)='verPelicula( pelicula.id)'>
             <!-- Imagen de la pelicula con su pipe que se utilizara como un filtro en tal caso de que la pelicula no tenga una imagen -->
             <img [src]="pelicula.poster_path|imgFill:'500'"
                     class="card-img-top"
@@ -22,7 +22,7 @@
             <!-- Cuerpo de la card -->
             <div class="card-body">
                 <!-- Titulo de la pelicula -->
-                <h4 class="card-title text-center"> {{ pelicula.title}} </h4>
+                <h4 class="card-title text-center text-white"> {{ pelicula.title}} </h4>
                 <!-- El rating de cada pelicula -->
                 <div class="row">
                     <div class="col p-0">

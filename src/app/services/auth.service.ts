@@ -24,14 +24,27 @@ export class AuthService {
       if(!user){
         return; //No retorna nada
       } 
+      
       this.usuario.nombre = user.displayName;
       this.usuario.correo = user.email;
       this.usuario.uid = user.uid;
     })
   }
   
-  guardarToken(token){
-    localStorage.setItem('AccessToken',JSON.stringify(token))
+
+  guardarToken(token, userUid ){
+    localStorage.setItem('AccessToken',JSON.stringify(token));
+    localStorage.setItem('id',JSON.stringify(userUid));
+  }
+
+  //Crear cuenta
+  sigIn(user:string, password:string){
+    return this.auth.createUserWithEmailAndPassword( user, password )
+  }
+  
+  //Login con correo
+  loginCorreo(user:string, password:string){
+    return this.auth.signInWithEmailAndPassword( user, password )
   }
 
   //Metodo para loguearse
