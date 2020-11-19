@@ -1,0 +1,15 @@
+footer{
+    background-color: rgb(69, 111, 226);;
+    text-align: center;
+}
+
+footer p{
+    padding: 20px 0px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+footer a{
+    color: white;
+    font-weight: 500;
+}

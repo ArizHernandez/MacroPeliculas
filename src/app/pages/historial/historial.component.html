@@ -1,10 +1,19 @@
 <div class="container mt-4">
     <div class="h3 text-center text-white">Historial de compras </div>
     <hr class="bg-white mt-2 mb-4">
-    <div class="row" *ngIf="historial.length > 0">
+
+    <div class="d-flex justify-content-center" *ngIf="cargando">
+        <div class="spinner-grow text-white" role="status" >
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="historial.length > 0 && !cargando">
         <app-historial-card [historial]="historial"></app-historial-card>
     </div>
+
     <div>
-        <h2 class="text-center" *ngIf="historial.length <= 0">Al parecer no has comprado nada.</h2>
+        <h2 class="text-center text-white" *ngIf="historial.length <= 0 && !cargando">Al parecer no has comprado nada.</h2>
     </div>
+
 </div>

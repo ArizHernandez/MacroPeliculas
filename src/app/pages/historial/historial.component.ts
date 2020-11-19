@@ -12,6 +12,7 @@ export class HistorialComponent implements OnInit {
 
   usuarioUid:string;
   historial:DatoUsuario[] = [];
+  cargando:boolean = true;
 
   constructor( private rentarPeliculaService:RentarPeliculaService,
                private route:ActivatedRoute ) { 
@@ -29,7 +30,7 @@ export class HistorialComponent implements OnInit {
   getCompras( id:string ){
     this.rentarPeliculaService.getRentas( id )
               .subscribe( (resp:any) => {
-                console.log( resp );
+                this.cargando = false;
                 !resp ? null : this.historial = resp.datos;
               })
   }

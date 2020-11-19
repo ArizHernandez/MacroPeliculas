@@ -14,6 +14,7 @@ import { CastSlideComponent } from './cast-slide/cast-slide.component';
 import { HistorialCardComponent } from './historial-card/historial-card.component';
 import { RentarFormComponent } from './rentar-form/rentar-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   // La declaración de nuestros componentes
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CastSlideComponent,
     HistorialCardComponent,
     RentarFormComponent,
+    FooterComponent,
   ],
   // Importaciones de los modulos que vamos a utilizar 
   imports: [
@@ -40,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PeliculasCardComponent,
     SlideShowComponent,
     CastSlideComponent,
-    HistorialCardComponent
+    HistorialCardComponent,
+    FooterComponent,
   ]
 })
 export class ComponentsModule { }

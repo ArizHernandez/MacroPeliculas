@@ -4,6 +4,7 @@
 
 .card-img img{
     width: 100%;
+    max-width: 140px;
 }
 
 .card-content{
